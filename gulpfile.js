@@ -16,7 +16,7 @@ const include = require('gulp-include');
 
 
 function styles() {
-  return src('app/scss/**/*.scss')
+  return src('app/scss/**/*.scss', { 'allowEmpty': true })
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
     .pipe(concat('style.min.css'))
     .pipe(scss({ outputStyle: 'compressed' }))
@@ -25,8 +25,8 @@ function styles() {
 }
 
 function scripts() {
-  return src('app/js/main.js')
-    .pipe(concat('main.min.js'))
+  return src('app/js/index.js', { 'allowEmpty': true })
+    .pipe(concat('index.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
@@ -40,19 +40,22 @@ function cleanDist() {
 function images() {
   return src([
     'app/images/src/*.*',
-    '!app/images/src/*.svg'
+    '!app/images/src/*.svg',
+    { 'allowEmpty': true }
   ])
     .pipe(newer('app/images'))
     .pipe(avif({ quality: 50 }))
     .pipe(src([
       'app/images/src/*.*',
-      '!app/images/src/*.svg'
+      '!app/images/src/*.svg',
+      { 'allowEmpty': true }
     ]))
     .pipe(newer('app/images'))
     .pipe(webp())
     .pipe(src([
       'app/images/src/*.*',
-      '!app/images/src/*.svg'
+      '!app/images/src/*.svg',
+      { 'allowEmpty': true }
     ]))
     .pipe(newer('app/images'))
     .pipe(imagemin())
@@ -62,14 +65,15 @@ function images() {
 function toWebp() {
   return src([
     'app/images/src/*.*',
-    '!app/images/src/*.svg'
+    '!app/images/src/*.svg',
+    { 'allowEmpty': true }
   ])
     .pipe(webp())
     .pipe(dest('app/images/dist'))
 }
 
 function sprite() {
-  return src('app/images/src/*.svg')
+  return src('app/images/src/*.svg', { 'allowEmpty': true })
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -82,17 +86,17 @@ function sprite() {
 }
 
 function fonts() {
-  return src('app/fonts/src/*.*')
+  return src('app/fonts/src/*.*', { 'allowEmpty': true })
     .pipe(fonter({
       formats: ['woff', 'ttf']
     }))
-    .pipe(src('app/fonts/*.ttf'))
+    .pipe(src('app/fonts/*.ttf'), { 'allowEmpty': true })
     .pipe(ttf2woff2())
-    .pipe(dest('app/fonts'))
+    .pipe(dest('app/fonts'), { 'allowEmpty': true })
 }
 
 function pages() {
-  return src('app/pages/*.html')
+  return src('app/pages/*.html', { 'allowEmpty': true })
     .pipe(include({
       includePaths: 'app/components'
     }))
@@ -109,7 +113,7 @@ function watching() {
   });
   watch(['app/scss/style.scss'], styles)
   watch(['app/images/src'], images)
-  watch(['app/js/main.js'], scripts)
+  watch(['app/js/index.js'], scripts)
   watch(['app/components/*', 'app/pages/*'], pages)
   watch(['app/*.html']).on('change', browserSync.reload) // app/**/*.html - все файлы html, не только в корне */
 }
@@ -122,7 +126,7 @@ function building() {
     '!app/images/dist/stack/*.*',
     'app/images/dist/sprite.svg',
     'app/fonts/*.*',
-    'app/js/main.min.js',
+    'app/js/index.min.js',
     'app/**/*.html'
   ], { base: 'app' })
     .pipe(dest('dist'))
