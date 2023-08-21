@@ -1,0 +1,16 @@
+@import "templates/_colors";
+@import "templates/_fonts";
+@import "templates/_mixins";
+@import "templates/_reset";
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
