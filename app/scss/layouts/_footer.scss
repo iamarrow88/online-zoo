@@ -73,9 +73,14 @@
     align-items: center;
     gap: 12px;
     width: 100%;
+    @include social-links-default;
     svg {
       width: 26px;
       height: 26px;
+    }
+
+    &:active {
+      @include social-links-active;
     }
   }
 }
