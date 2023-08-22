@@ -22,3 +22,30 @@ body {
   padding: 0 20px;
   max-width: 1200px;
 }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      color: $orange-links;
+    }
+  }
+}
+
+.header .menu {
+  gap: 58px;
+}
+
+.footer .menu {
+  width: 371px;
+  gap: 48px;
+}

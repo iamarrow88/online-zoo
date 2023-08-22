@@ -16,22 +16,3 @@
     width: 995px;
   }
 }
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 58px;
-
-  &__link {
-    font-weight: 500;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    &:active {
-      color: $orange-links;
-    }
-  }
-}
