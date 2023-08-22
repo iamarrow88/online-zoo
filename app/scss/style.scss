@@ -67,3 +67,18 @@ body {
     @include default-disabled;
   }
 }
+
+.submit-btn {
+  @include submit-form;
+  @include submit-default;
+  transition: color 0.5s;
+
+  &:hover {
+    color: #7bc52d;
+    transition: color 0.5s;
+  }
+
+  &:active {
+    @include submit-active;
+  }
+}
