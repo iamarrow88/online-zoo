@@ -3,6 +3,7 @@
 @import "templates/_mixins";
 @import "templates/_reset";
 @import "layouts/_header";
+@import "layouts/_footer";
 @import "blocks/_logo";
 
 html,
@@ -48,4 +49,21 @@ body {
 .footer .menu {
   width: 371px;
   gap: 48px;
+}
+
+.btn {
+  @include btn-form;
+  @include default-style;
+
+  &:hover {
+    @include default-hover;
+  }
+
+  &:active {
+    @include default-active;
+  }
+
+  &:disabled {
+    @include default-disabled;
+  }
 }
