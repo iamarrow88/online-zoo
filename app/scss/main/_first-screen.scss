@@ -1,11 +1,13 @@
 .first-screen {
   min-height: 780px;
-  background: url("../../images/1.Giant_Panda.avif") center center/cover no-repeat;
 
   &__container {
     padding: 86px 20px 100px;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
+    max-width: 1600px;
+    background: url("../../images/1.Giant_Panda.avif") center center/cover no-repeat;
   }
 
   &__wrapper {
