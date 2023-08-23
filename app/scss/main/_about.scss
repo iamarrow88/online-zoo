@@ -1,13 +1,19 @@
 .about {
-  width: 100%;
+  margin: 0 auto;
+  width: 1600px;
   color: $black-blue;
   text-align: left;
   &__container {
-    padding: 100px 20px;
+    padding: 100px 220px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    width: 100%;
+    max-width: 1600px;
+    background: url("../../images/2.flower.avif") no-repeat;
+    background-size: 293px 605px;
+    background-position: 1317px center;
   }
 
   &__img {
