@@ -107,7 +107,7 @@
   height: 42px;
   border-radius: 5px;
   @include btn-fonts;
-  background-color: $light-gray;
+  background-color: $gray-light;
 }
 
 @mixin submit-default {

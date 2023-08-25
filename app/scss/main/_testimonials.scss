@@ -1,0 +1,118 @@
+.testimonials {
+  &__container {
+    padding: 140px 0 180px;
+    background-color: #fff;
+    background-image: url("../../images/5-leaf-aside.webp");
+    background-size: 247px 408px;
+    background-position: 2px 10px;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+  }
+
+  &__title {
+    margin: 0 auto 47px;
+    max-width: 300px;
+    @include h3;
+    text-align: center;
+  }
+
+  &__reviews {
+    margin: 0 auto 20px;
+    max-width: 1160px;
+    overflow: hidden;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    @include btn-circle;
+  }
+}
+
+.reviews {
+  &__wrapper {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 268px);
+    gap: 30px;
+  }
+
+  &__gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $pink-gradient;
+    height: 391px;
+    border-radius: 20px;
+  }
+
+  &__item {
+    padding: 15px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 264px;
+    height: 387px;
+    border-radius: 17px;
+    background-color: $gray-light;
+    overflow: hidden;
+  }
+
+  &__scroll-line {
+    margin: 0 auto;
+    width: 599px;
+    height: 8px;
+    border-radius: 5px;
+    background: $pink-gradient;
+  }
+}
+
+.scroll-line {
+  position: relative;
+  &__inner {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    margin: 0 auto;
+    width: 98%;
+    height: 62%;
+
+    background-color: #f5f7f6;
+    border-radius: 5px;
+  }
+}
+
+.review {
+  text-align: left;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__avatar {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__name {
+    @include input-placeholder;
+    line-height: 120%;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    @include smallParagraph;
+    color: $gray-4;
+  }
+
+  &__content {
+    @include smallParagraph;
+    color: $gray;
+  }
+}
