@@ -7,6 +7,7 @@
 @import "blocks/_logo";
 @import "main/_first-screen.scss";
 @import "main/_about.scss";
+@import "main/_animal-species.scss";
 
 html,
 body {
@@ -83,4 +84,8 @@ body {
   &:active {
     @include submit-active;
   }
+}
+
+.slider.visible {
+  opacity: 1;
 }
