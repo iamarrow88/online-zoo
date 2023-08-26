@@ -1,5 +1,5 @@
 .first-screen {
-  min-height: 780px;
+  min-height: 700px;
 
   &__container {
     padding: 86px 220px 100px;
@@ -7,7 +7,7 @@
     justify-content: flex-end;
     width: 100%;
     max-width: 1600px;
-    background: url("../../images/1.Giant_Panda.avif") center center/cover no-repeat;
+    background: url("../../images/1.Giant_Panda.avif") 0px -74px / cover no-repeat;
   }
 
   &__wrapper {
@@ -23,8 +23,8 @@
 
   &__circle {
     position: absolute;
-    top: -78px;
-    right: 103px;
+    top: -74px;
+    right: 108px;
     width: 465px;
     height: 465px;
     border-radius: 465px;
