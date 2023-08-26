@@ -1,15 +1,7 @@
+@import "templates/_reset";
 @import "templates/_colors";
 @import "templates/_fonts";
 @import "templates/_mixins";
-@import "templates/_reset";
-@import "layouts/_header";
-@import "layouts/_footer";
-@import "blocks/_logo";
-@import "main/_first-screen.scss";
-@import "main/_about.scss";
-@import "main/_animal-species.scss";
-@import "main/_pick-and-feed.scss";
-@import "main/_testimonials.scss";
 
 html,
 body {
