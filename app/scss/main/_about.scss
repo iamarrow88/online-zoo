@@ -4,16 +4,16 @@
   color: $black-blue;
   text-align: left;
   &__container {
-    padding: 100px 220px;
+    padding: 140px 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 88px;
     width: 100%;
     max-width: 1600px;
     background: url("../../images/2.flower.avif") no-repeat;
-    background-size: 293px 605px;
-    background-position: 1317px center;
+    background-size: 289px 605px;
+    background-position: 1402px 17px;
   }
 
   &__img {
