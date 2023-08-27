@@ -4,13 +4,13 @@
   background: $orange-opacity09;
 
   &__container {
-    padding: 70px 220px 100px;
+    padding: 70px 220px 103px;
     width: 100%;
     background-color: rgba(253, 253, 255, 0.52);
   }
 
   &__layout {
-    padding: 40px 60px 60px 100px;
+    padding: 40px 60px 54px 99px;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
@@ -18,26 +18,26 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     @include h2;
     color: #fe9013;
     text-align: center;
   }
 
   &__subtitle {
-    margin: 0 auto 20px;
-    max-width: 823px;
+    margin: 0 auto 39px;
+    max-width: 100%;
     @include subtitle;
   }
 
   &__text {
-    margin: 0 auto 80px;
+    margin: 0 auto 66px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
     gap: 10px;
-    max-width: 823px;
+    max-width: 100%;
     @include input-placeholder;
     line-height: 1.3;
   }
@@ -50,7 +50,7 @@
 .steps {
   &__title {
     margin: 0 auto 40px;
-    max-width: 300px;
+    max-width: 500px;
     @include h3;
     text-align: center;
   }
@@ -60,7 +60,7 @@
     display: grid;
     grid-template-columns: 168px 70px 168px 70px 168px;
     gap: 30px;
-    max-width: 765px;
+    max-width: 796px;
   }
 
   &__item {
