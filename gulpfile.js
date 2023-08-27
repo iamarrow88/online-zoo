@@ -103,7 +103,7 @@ function pages() {
 function watching() {
   browserSync.init({
     server: {
-      baseDir: "app/",
+      baseDir: "dist/index",
     },
     port: 8080,
   });
@@ -111,7 +111,7 @@ function watching() {
   watch(['app/images/src'], images)
   watch(['app/js/index.js'], scripts)
   watch(['app/components/*', 'app/pages/*'], pages)
-  watch(['app/*.html']).on('change', browserSync.reload) // app/**/*.html - все файлы html, не только в корне */
+  watch(['app/index/*.html']).on('change', browserSync.reload) // app/**/*.html - все файлы html, не только в корне */
 }
 
 function building() {
