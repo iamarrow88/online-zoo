@@ -116,15 +116,22 @@ function watching() {
 
 function building() {
   return src([
-    'app/css/style.min.css',
-    'app/images/dist/*.*',
-    '!app/images/dist/*.svg',
-    '!app/images/dist/stack/*.*',
-    'app/images/dist/sprite.svg',
+    /* 'app/css/style.min.css',
+    'app/images/*.*',
+    '!app/images/*.svg',
+    'app/images/sprite.svg',
     'app/fonts/*.*',
-    'app/js/index.min.js',
-    'app/**/*.html'
-  ], { base: 'app' })
+    'app/js/index.min.js',*/
+    'app/**/*.*',
+    '!app/components/**/*.html',
+    '!app/fonts/src/*.*',
+    '!app/images/src/*.*',
+    '!app/images/**/*.svg',
+    'app/images/sprite.svg',
+    '!app/js/index.js',
+    '!app/scss/**/*.*s',
+
+  ], { 'allowEmpty': true }, { base: 'app' })
     .pipe(dest('dist'))
 }
 
