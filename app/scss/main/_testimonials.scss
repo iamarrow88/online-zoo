@@ -1,10 +1,10 @@
 .testimonials {
   &__container {
-    padding: 140px 0 180px;
+    padding: 140px 0 158px;
     background-color: #fff;
     background-image: url("../../images/5-leaf-aside.webp");
     background-size: 247px 408px;
-    background-position: 1353px 599px;
+    background-position: 1355px 642px;
     background-repeat: no-repeat;
   }
 
@@ -22,8 +22,7 @@
   }
 
   &__btn {
-    margin: 0 auto;
-    @include btn-circle;
+    @include btn-rectangle;
   }
 }
 
@@ -59,7 +58,7 @@
   }
 
   &__scroll-line {
-    margin: 0 auto;
+    margin: 0 auto 32px;
     width: 599px;
     height: 8px;
     border-radius: 5px;
