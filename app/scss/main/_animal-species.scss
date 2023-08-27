@@ -1,0 +1,105 @@
+.animal-species {
+  width: 100%;
+  height: 1147px;
+
+  &__container {
+    padding: 41px 140px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/3-left-palm-aside.webp"), url("../../images/3-right-strelitzia-aside.webp");
+    background-size:
+      291px 464px,
+      368px 275px;
+    background-position:
+      0px 682px,
+      1233px 873px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  &__btn {
+    @include btn-circle;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 86%;
+  }
+}
+
+.slider {
+  &__layouts {
+    position: relative;
+    width: 96%;
+    height: 100%;
+  }
+
+  &__layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px 26px;
+    opacity: 0;
+  }
+
+  &__controls {
+    width: 62px;
+    height: 62px;
+    border-radius: 62px;
+    @include default-style;
+    svg {
+      width: 16px;
+      height: 8px;
+    }
+
+    &:hover {
+      @include default-hover;
+    }
+
+    &:active {
+      @include default-active;
+    }
+  }
+}
+
+.layout {
+  &__item {
+    border: 1px solid $orange-links;
+    border-radius: 5px;
+  }
+
+  &__description {
+    padding: 8px 12px 13px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include btn-fonts;
+  }
+
+  &__about {
+    @include smallParagraph;
+  }
+
+  &__icon {
+    width: 33px;
+    height: 37px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

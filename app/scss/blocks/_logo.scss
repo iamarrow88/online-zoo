@@ -1,0 +1,9 @@
+.logo {
+  width: 82px;
+  height: 52px;
+  flex-shrink: 2;
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}

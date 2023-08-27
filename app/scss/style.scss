@@ -1,0 +1,86 @@
+@import "templates/_reset";
+@import "templates/_colors";
+@import "templates/_fonts";
+@import "templates/_mixins";
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 220px;
+  max-width: 1600px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      color: $orange-links;
+    }
+  }
+}
+
+.header .menu {
+  gap: 58px;
+}
+
+.footer .menu {
+  width: 371px;
+  gap: 48px;
+}
+
+.btn {
+  @include btn-form;
+  @include default-style;
+
+  &:hover {
+    @include default-hover;
+  }
+
+  &:active {
+    @include default-active;
+  }
+
+  &:disabled {
+    @include default-disabled;
+  }
+}
+
+.submit-btn {
+  @include submit-form;
+  @include submit-default;
+  transition: color 0.5s;
+
+  &:hover {
+    color: #7bc52d;
+    transition: color 0.5s;
+  }
+
+  &:active {
+    @include submit-active;
+  }
+}
+
+.slider__layout.visible {
+  opacity: 1;
+}

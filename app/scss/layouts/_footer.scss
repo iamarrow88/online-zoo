@@ -1,0 +1,105 @@
+.footer {
+  padding: 40px 20px 50px;
+  background-color: #000;
+  color: #fff;
+
+  &__up {
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__donate-btn {
+    margin-bottom: 44px;
+    @include btn-rectangle;
+    @include default-style;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__info {
+    font-weight: 100;
+  }
+}
+
+.subscribe-block {
+  width: 367px;
+  &__label {
+    margin-bottom: 14px;
+    display: block;
+    @include subtitle;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__input {
+    @include input-form;
+    @include input-default;
+    background-color: transparent;
+    &::placeholder {
+      @include input-placeholder;
+    }
+  }
+
+  &__btn {
+    @include submit-form;
+    @include submit-active;
+    text-transform: none;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 228px;
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    @include social-links-default;
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    &:active {
+      @include social-links-active;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 58px;
+
+  &__link {
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      color: $orange-links;
+    }
+  }
+}

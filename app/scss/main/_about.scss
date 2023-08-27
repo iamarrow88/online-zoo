@@ -1,0 +1,47 @@
+.about {
+  margin: 0 auto;
+  width: 1600px;
+  color: $black-blue;
+  text-align: left;
+  &__container {
+    padding: 140px 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+    width: 100%;
+    max-width: 1600px;
+    background: url("../../images/2.flower.avif") no-repeat;
+    background-size: 289px 605px;
+    background-position: 1402px 17px;
+  }
+
+  &__img {
+    max-width: 658px;
+  }
+
+  &__content {
+    width: 490px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    width: 100%;
+    @include h2;
+  }
+
+  &__text {
+    width: 100%;
+    line-height: 130%;
+  }
+
+  &__subtile {
+    width: 100%;
+    @include subtitle;
+    margin-bottom: 35px;
+  }
+}
+
+.text-1 {
+  margin-bottom: 55px;
+}
